@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- (1) Wrong root element name -->
+<!-- (1) Wrong root name -->
 <HotelList>
-  <Hotel Rating="4.2">
-    <!-- (5) Duplicate Name element -->
-    <Name>Westin Tempe</Name>
-    <Name>Duplicate Westin</Name>
 
-    <!-- (2) Missing required attribute 'primary' on one Phone -->
+  <!-- (2) Missing required attribute 'primary' -->
+  <Hotel Rating="4.2">
+    <Name>Westin Tempe</Name>
+    <Name>DuplicateName</Name> <!-- (5) Duplicate name -->
     <Phone>480-968-8885</Phone>
     <Phone primary="false">800-937-8461</Phone>
 
-    <!-- (3) Missing one Phone element entirely (compared to the valid file) -->
-
-    <!-- (4) Missing closing tag for Address -->
+    <!-- (3) One hotel missing a <Phone> entirely — just delete one from another Hotel -->
+    <!-- (4) Unclosed Address tag -->
     <Address>
       <Number>11</Number>
       <Street>E 7th St</Street>
@@ -20,6 +18,6 @@
       <State>AZ</State>
       <Zip>85281</Zip>
       <NearestAirport>Phoenix Sky Harbor</NearestAirport>
-    <!-- Notice: no </Address> here -->
+    <!-- MISSING </Address> -->
   </Hotel>
 </HotelList>
