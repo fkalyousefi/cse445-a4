@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Hotels xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="https://fkalyousefi.github.io/cse445-a4/Hotels.xsd">
+<Hotels xmlns="http://cse445.edu/xml"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://cse445.edu/xml https://fkalyousefi.github.io/cse445-a4/Hotels.xsd">
 
   <Hotel id="H1" Rating="4.2">
     <Name>Westin Tempe</Name>
-    <Phone primary="true">480-968-8885</Phone>
-    <Phone primary="false">800-937-8461</Phone>
+    <Phone>480-968-8885</Phone>
+    <Phone>800-937-8461</Phone>
     <Address>
       <Number>11</Number>
       <Street>E 7th St</Street>
@@ -18,7 +19,7 @@
 
   <Hotel id="H2" Rating="4.5">
     <Name>Hilton Garden Inn Phoenix Downtown</Name>
-    <Phone primary="true">602-343-0006</Phone>
+    <Phone>602-343-0006</Phone>
     <Address>
       <Number>15</Number>
       <Street>E Monroe St</Street>
@@ -31,7 +32,7 @@
 
   <Hotel id="H3" Rating="4.1">
     <Name>Hyatt Place Tempe</Name>
-    <Phone primary="true">480-804-9544</Phone>
+    <Phone>480-804-9544</Phone>
     <Address>
       <Number>730</Number>
       <Street>S Mill Ave</Street>
@@ -44,7 +45,7 @@
 
   <Hotel id="H4">
     <Name>Courtyard Phoenix Downtown</Name>
-    <Phone primary="true">602-555-1111</Phone>
+    <Phone>602-555-1111</Phone>
     <Address>
       <Number>132</Number>
       <Street>S Central Ave</Street>
@@ -57,7 +58,7 @@
 
   <Hotel id="H5" Rating="4.3">
     <Name>Kimpton Hotel Palomar Phoenix</Name>
-    <Phone primary="true">602-253-6633</Phone>
+    <Phone>602-253-6633</Phone>
     <Address>
       <Number>2</Number>
       <Street>E Jefferson St</Street>
@@ -70,7 +71,7 @@
 
   <Hotel id="H6">
     <Name>Renaissance Phoenix Downtown Hotel</Name>
-    <Phone primary="true">602-333-0000</Phone>
+    <Phone>602-333-0000</Phone>
     <Address>
       <Number>100</Number>
       <Street>N 1st St</Street>
@@ -83,7 +84,7 @@
 
   <Hotel id="H7" Rating="4.0">
     <Name>Tempe Mission Palms</Name>
-    <Phone primary="true">480-894-1400</Phone>
+    <Phone>480-894-1400</Phone>
     <Address>
       <Number>60</Number>
       <Street>E 5th St</Street>
@@ -96,7 +97,7 @@
 
   <Hotel id="H8">
     <Name>AC Hotel Phoenix Downtown</Name>
-    <Phone primary="true">602-875-8000</Phone>
+    <Phone>602-875-8000</Phone>
     <Address>
       <Number>414</Number>
       <Street>N 5th St</Street>
@@ -109,7 +110,7 @@
 
   <Hotel id="H9" Rating="4.2">
     <Name>Residence Inn Phoenix Downtown</Name>
-    <Phone primary="true">602-603-2000</Phone>
+    <Phone>602-603-2000</Phone>
     <Address>
       <Number>132</Number>
       <Street>S Central Ave</Street>
@@ -122,7 +123,7 @@
 
   <Hotel id="H10">
     <Name>Hyatt Regency Phoenix</Name>
-    <Phone primary="true">602-252-1234</Phone>
+    <Phone>602-252-1234</Phone>
     <Address>
       <Number>122</Number>
       <Street>N 2nd St</Street>
@@ -135,7 +136,7 @@
 
   <Hotel id="H11" Rating="4.3">
     <Name>Canopy by Hilton Tempe Downtown</Name>
-    <Phone primary="true">480-968-8880</Phone>
+    <Phone>480-968-8880</Phone>
     <Address>
       <Number>108</Number>
       <Street>E University Dr</Street>
