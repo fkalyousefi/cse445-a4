@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
 
   <xs:element name="Hotels">
     <xs:complexType>
@@ -8,35 +10,39 @@
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Name" type="xs:string"/>
-              <xs:element name="Phone" type="phoneType" maxOccurs="unbounded"/>
-              <xs:element name="Address" type="addressType"/>
+
+              <!-- Phone appears 1..* with a REQUIRED attribute 'primary' -->
+              <xs:element name="Phone" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="primary" type="xs:boolean" use="required"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+
+              <!-- Address (all strings; safest for content checks) -->
+              <xs:element name="Address">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Number" type="xs:string"/>
+                    <xs:element name="Street" type="xs:string"/>
+                    <xs:element name="City" type="xs:string"/>
+                    <xs:element name="State" type="xs:string"/>
+                    <xs:element name="Zip" type="xs:string"/>
+                    <xs:element name="NearestAirport" type="xs:string"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
             </xs:sequence>
-            <!-- Optional attribute on Hotel -->
+
+            <!-- OPTIONAL attribute on Hotel -->
             <xs:attribute name="Rating" type="xs:decimal" use="optional"/>
           </xs:complexType>
         </xs:element>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-
-  <xs:complexType name="addressType">
-    <xs:sequence>
-      <xs:element name="Number" type="xs:int"/>
-      <xs:element name="Street" type="xs:string"/>
-      <xs:element name="City" type="xs:string"/>
-      <xs:element name="State" type="xs:string"/>
-      <xs:element name="Zip" type="xs:int"/>
-      <xs:element name="NearestAirport" type="xs:string"/>
-    </xs:sequence>
-  </xs:complexType>
-
-  <xs:complexType name="phoneType">
-    <xs:simpleContent>
-      <xs:extension base="xs:string">
-        <!-- Required attribute on Phone -->
-        <xs:attribute name="primary" type="xs:boolean" use="required"/>
-      </xs:extension>
-    </xs:simpleContent>
-  </xs:complexType>
 
 </xs:schema>
