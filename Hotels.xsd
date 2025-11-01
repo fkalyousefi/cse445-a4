@@ -11,7 +11,7 @@
             <xs:sequence>
               <xs:element name="Name" type="xs:string"/>
 
-              <!-- Phone appears 1..* with a REQUIRED attribute 'primary' -->
+              <!-- Phone appears 1..* with REQUIRED attribute 'primary' -->
               <xs:element name="Phone" maxOccurs="unbounded">
                 <xs:complexType>
                   <xs:simpleContent>
@@ -22,7 +22,7 @@
                 </xs:complexType>
               </xs:element>
 
-              <!-- Address (all strings; safest for content checks) -->
+              <!-- Address -->
               <xs:element name="Address">
                 <xs:complexType>
                   <xs:sequence>
@@ -37,7 +37,8 @@
               </xs:element>
             </xs:sequence>
 
-            <!-- OPTIONAL attribute on Hotel -->
+            <!-- Attributes on Hotel -->
+            <xs:attribute name="id" type="xs:string" use="required"/>
             <xs:attribute name="Rating" type="xs:decimal" use="optional"/>
           </xs:complexType>
         </xs:element>
